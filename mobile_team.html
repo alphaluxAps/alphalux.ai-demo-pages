@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alphalux – The Full Team</title>
+    <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+    <style>
+        @keyframes morph {
+            0%, 100% { border-radius: 20%; transform: rotate(0deg); }
+            33% { border-radius: 30%; transform: rotate(120deg); }
+            66% { border-radius: 25%; transform: rotate(240deg); }
+        }
+        @keyframes pulseSlow {
+            0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+            50% { transform: translate(-50%, -50%) scale(1.2); opacity: 0.7; }
+        }
+        @keyframes fadeUp {
+            0% { opacity: 0; transform: translateY(30px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        .animate-morph {
+            animation: morph 8s ease-in-out infinite;
+        }
+        .animate-pulse-slow {
+            animation: pulseSlow 2s ease-in-out infinite;
+        }
+        .animate-fade-up {
+            animation: fadeUp 0.8s ease forwards;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-b from-gray-50 to-gray-100 text-gray-900">
+    <div class="max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
+        <!-- Header -->
+        <header class="py-10 md:py-12 lg:py-16">
+            <div class="text-xl md:text-2xl font-medium">
+                alphalux<span class="text-blue-600">.ai</span>
+            </div>
+        </header>
+
+        <!-- Hero -->
+        <section class="text-center pb-16 md:pb-20 lg:pb-24">
+            <h1 class="text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-bold leading-none mb-8">
+                Same headcount.<br>
+                Infinite bandwidth.
+            </h1>
+            <p class="text-lg md:text-xl lg:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                We're an AI consultancy that practices what we preach. 
+                Two humans, countless synthetic colleagues, one unified team.
+            </p>
+        </section>
+    </div>
+
+    <!-- Team Photo Section -->
+    <section class="bg-white border-y border-gray-200 py-16 md:py-20 lg:py-24">
+        <div class="max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
+            <h2 class="text-2xl md:text-3xl lg:text-4xl font-medium text-center mb-12 md:mb-16">
+                Meet the full team
+            </h2>
+            
+            <div class="bg-gradient-to-br from-gray-50 to-white border border-gray-200 rounded-lg p-8 md:p-12 lg:p-16">
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 md:gap-10">
+                    <!-- Human Team Members -->
+                    <div class="text-center group hover:-translate-y-1 transition-transform">
+                        <div class="w-24 h-24 md:w-32 md:h-32 mx-auto mb-4 rounded-full bg-gray-100 flex items-center justify-center text-xs text-gray-500 border-3 border-blue-600 overflow-hidden">
+                            Photo<br>Henrik
+                        </div>
+                        <div class="text-base md:text-lg font-semibold">Henrik</div>
+                        <div class="text-xs md:text-sm text-gray-600">Founder & Strategist</div>
+                    </div>
+                    
+                    <div class="text-center group hover:-translate-y-1 transition-transform">
+                        <div class="w-24 h-24 md:w-32 md:h-32 mx-auto mb-4 rounded-full bg-gray-100 flex items-center justify-center text-xs text-gray-500 border-3 border-blue-600 overflow-hidden">
+                            Photo<br>Lukas
+                        </div>
+                        <div class="text-base md:text-lg font-semibold">Lukas</div>
+                        <div class="text-xs md:text-sm text-gray-600">Co-Founder & AI Engineer</div>
+                    </div>
+                    
+                    <!-- AI Team Members -->
+                    <div class="text-center opacity-70 hover:opacity-100 transition-opacity">
+                        <div class="w-24 h-24 md:w-32 md:h-32 mx-auto mb-4 relative flex items-center justify-center">
+                            <div class="w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-blue-100 to-blue-50 border-2 border-blue-200 animate-morph relative">
+                                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-6 h-6 md:w-8 md:h-8 bg-gradient-to-br from-blue-400 to-blue-300 rounded-full animate-pulse-slow"></div>
+                            </div>
+                        </div>
+                        <div class="text-sm md:text-base font-medium">Agent Alpha</div>
+                        <div class="text-xs text-gray-600">Development</div>
+                    </div>
+                    
+                    <div class="text-center opacity-70 hover:opacity-100 transition-opacity">
+                        <div class="w-24 h-24 md:w-32 md:h-32 mx-auto mb-4 relative flex items-center justify-center">
+                            <div class="w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-blue-100 to-blue-50 border-2 border-blue-200 animate-morph relative" style="animation-delay: 1s">
+                                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-6 h-6 md:w-8 md:h-8 bg-gradient-to-br from-blue-400 to-blue-300 rounded-full animate-pulse-slow"></div>
+                            </div>
+                        </div>
+                        <div class="text-sm md:text-base font-medium">Agent Beta</div>
+                        <div class="text-xs text-gray-600">Testing & QA</div>
+                    </div>
+                    
+                    <div class="text-center opacity-70 hover:opacity-100 transition-opacity">
+                        <div class="w-24 h-24 md:w-32 md:h-32 mx-auto mb-4 relative flex items-center justify-center">
+                            <div class="w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-blue-100 to-blue-50 border-2 border-blue-200 animate-morph relative" style="animation-delay: 2s">
+                                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-6 h-6 md:w-8 md:h-8 bg-gradient-to-br from-blue-400 to-blue-300 rounded-full animate-pulse-slow"></div>
+                            </div>
+                        </div>
+                        <div class="text-sm md:text-base font-medium">Agent Gamma</div>
+                        <div class="text-xs text-gray-600">Research</div>
+                    </div>
+                    
+                    <div class="text-center opacity-70 hover:opacity-100 transition-opacity">
+                        <div class="w-24 h-24 md:w-32 md:h-32 mx-auto mb-4 relative flex items-center justify-center">
+                            <div class="w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-blue-100 to-blue-50 border-2 border-blue-200 animate-morph relative" style="animation-delay: 3s">
+                                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-6 h-6 md:w-8 md:h-8 bg-gradient-to-br from-blue-400 to-blue-300 rounded-full animate-pulse-slow"></div>
+                            </div>
+                        </div>
+                        <div class="text-sm md:text-base font-medium">Agent Delta</div>
+                        <div class="text-xs text-gray-600">Operations</div>
+                    </div>
+                </div>
+                
+                <p class="text-center mt-12 md:mt-16 text-sm md:text-base text-gray-600 italic">
+                    * Our synthetic colleagues work 24/7, scale infinitely, and evolve continuously.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <div class="max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
+        <!-- Info Grid -->
+        <section class="py-16 md:py-20 lg:py-24">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
+                <div class="p-8 md:p-10 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow opacity-0 animate-fade-up">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-5">Father & Son Dynamic</h3>
+                    <p class="text-gray-600 text-sm md:text-base leading-relaxed">
+                        25+ years of enterprise architecture meets native AI thinking. 
+                        Traditional wisdom, next-generation execution. Experience and innovation in perfect balance.
+                    </p>
+                </div>
+                <div class="p-8 md:p-10 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow opacity-0 animate-fade-up" style="animation-delay: 0.1s">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-5">Agentic Operations</h3>
+                    <p class="text-gray-600 text-sm md:text-base leading-relaxed">
+                        We don't just build AI systems—we operate as one. Our synthetic colleagues handle real work, 
+                        every day. This is how we deliver enterprise scale with boutique focus.
+                    </p>
+                </div>
+                <div class="p-8 md:p-10 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow opacity-0 animate-fade-up" style="animation-delay: 0.2s">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-5">Process Reimagination</h3>
+                    <p class="text-gray-600 text-sm md:text-base leading-relaxed">
+                        We don't automate broken workflows. We question why they exist and design AI-native alternatives 
+                        that actually make sense.
+                    </p>
+                </div>
+                <div class="p-8 md:p-10 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow opacity-0 animate-fade-up" style="animation-delay: 0.3s">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-5">Enterprise Ready</h3>
+                    <p class="text-gray-600 text-sm md:text-base leading-relaxed">
+                        HIPAA, legal confidentiality, financial compliance—these aren't afterthoughts. 
+                        They're built into our approach from day one.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Engagement -->
+        <section class="text-center py-16 md:py-20 bg-white rounded-lg mb-16 md:mb-20">
+            <h2 class="text-2xl md:text-3xl font-semibold mb-12 md:mb-16">Choose your engagement model</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto px-8 md:px-12">
+                <div class="p-8 md:p-12 border-2 border-gray-200 rounded-lg hover:border-blue-600 hover:bg-gray-50 transition-all">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4">Equity Partnership</h3>
+                    <p class="text-gray-600 text-sm md:text-base">
+                        We become co-founders, investing our expertise for equity with aligned long-term incentives.
+                    </p>
+                </div>
+                <div class="p-8 md:p-12 border-2 border-gray-200 rounded-lg hover:border-blue-600 hover:bg-gray-50 transition-all">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4">Consulting</h3>
+                    <p class="text-gray-600 text-sm md:text-base">
+                        Traditional project or retainer basis, focused on specific challenges and outcomes.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- CTA -->
+    <section class="bg-gradient-to-br from-blue-50 to-transparent py-16 md:py-20 lg:py-24">
+        <div class="text-center max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-semibold mb-10 md:mb-12">Ready to meet the team?</h2>
+            <a href="mailto:hello@alphalux.ai" 
+               class="inline-block px-12 md:px-16 py-4 md:py-5 text-lg md:text-xl text-blue-600 border-2 border-blue-600 rounded-full hover:bg-blue-600 hover:text-white transition-all">
+                hello@alphalux.ai
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center py-12 md:py-16 text-sm text-gray-600">
+        <p>Copenhagen • 2025 • Healthcare • Legal • Insurance • Finance • Marketing</p>
+    </footer>
+
+    <script>
+        // Reveal animations on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationPlayState = 'running';
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('[class*="animate-fade-up"]').forEach(el => {
+            el.style.animationPlayState = 'paused';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

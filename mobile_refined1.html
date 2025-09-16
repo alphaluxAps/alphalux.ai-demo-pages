@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alphalux – AI Consultancy</title>
+    <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+    <style>
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+        @keyframes drift {
+            0%, 100% { transform: translate(0, 0); }
+            33% { transform: translate(30px, -20px); }
+            66% { transform: translate(-20px, 30px); }
+        }
+        .animate-fade-in {
+            animation: fadeIn 1s ease forwards;
+        }
+        .animate-drift {
+            animation: drift 20s infinite linear;
+        }
+    </style>
+</head>
+<body class="bg-black text-white font-light overflow-x-hidden">
+    <!-- Grid Background -->
+    <div class="fixed inset-0 opacity-20 pointer-events-none z-0">
+        <div class="absolute inset-0" style="background-image: linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px); background-size: 40px 40px;"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="fixed w-full top-0 z-50 backdrop-blur-md bg-gradient-to-b from-black/70 to-transparent">
+        <div class="px-6 md:px-12 lg:px-20 py-6 md:py-8">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-xl md:text-2xl font-light">
+                    alphalux<span class="text-gray-500">.ai</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Floating Code -->
+    <div class="hidden md:block">
+        <div class="fixed text-xs font-mono text-zinc-800 animate-drift pointer-events-none" style="top: 20%; left: 10%;">agent.extend()</div>
+        <div class="fixed text-xs font-mono text-zinc-800 animate-drift pointer-events-none" style="top: 60%; right: 15%; animation-delay: 6s;">process.rethink()</div>
+        <div class="fixed text-xs font-mono text-zinc-800 animate-drift pointer-events-none" style="bottom: 30%; left: 20%; animation-delay: 12s;">bandwidth.scale()</div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="relative z-10 pt-24 md:pt-32 lg:pt-40 px-6 md:px-12 lg:px-20 pb-16 md:pb-24">
+        <div class="max-w-7xl mx-auto">
+            
+            <!-- Hero -->
+            <section class="mb-16 md:mb-24 lg:mb-32 opacity-0 animate-fade-in">
+                <h1 class="text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-extralight leading-none mb-8 md:mb-12">
+                    We are what we build.<br>
+                    AI-native from day one.
+                </h1>
+                <p class="text-lg md:text-xl lg:text-2xl text-gray-400 max-w-3xl">
+                    AI consultancy powered by humans and synthetic colleagues working in parallel.
+                </p>
+            </section>
+
+            <!-- Core Truth -->
+            <section class="mb-16 md:mb-24 lg:mb-32 opacity-0 animate-fade-in" style="animation-delay: 0.4s">
+                <div class="border border-zinc-800 bg-white/[0.02] p-8 md:p-12 lg:p-16">
+                    <h2 class="text-lg md:text-xl font-normal mb-6">Walking the walk</h2>
+                    <p class="text-gray-400 text-base md:text-lg leading-relaxed">
+                        Our synthetic colleagues handle development, testing, research, and operations around the clock. 
+                        This isn't a concept we sell—it's how we operate. Every day. Every project.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Team Composition -->
+            <section class="mb-16 md:mb-24 lg:mb-32 opacity-0 animate-fade-in" style="animation-delay: 0.6s">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10">
+                    <div class="text-center p-8 md:p-10 border border-zinc-900 hover:border-zinc-700 hover:bg-white/[0.02] transition-all">
+                        <div class="text-4xl md:text-5xl font-thin mb-4">2</div>
+                        <div class="text-xs md:text-sm uppercase tracking-wider text-gray-500">Human strategists</div>
+                    </div>
+                    <div class="text-center p-8 md:p-10 border border-zinc-900 hover:border-zinc-700 hover:bg-white/[0.02] transition-all">
+                        <div class="text-4xl md:text-5xl font-thin mb-4">∞</div>
+                        <div class="text-xs md:text-sm uppercase tracking-wider text-gray-500">Synthetic colleagues</div>
+                    </div>
+                    <div class="text-center p-8 md:p-10 border border-zinc-900 hover:border-zinc-700 hover:bg-white/[0.02] transition-all">
+                        <div class="text-4xl md:text-5xl font-thin mb-4">24/7</div>
+                        <div class="text-xs md:text-sm uppercase tracking-wider text-gray-500">Operating hours</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Approach -->
+            <section class="mb-16 md:mb-24 lg:mb-32 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 opacity-0 animate-fade-in" style="animation-delay: 0.8s">
+                <div>
+                    <h3 class="text-lg md:text-xl font-normal mb-4">Experience meets innovation</h3>
+                    <p class="text-gray-400 text-sm md:text-base leading-relaxed">
+                        25+ years of enterprise system architecture combined with cutting-edge AI implementation. Traditional wisdom, next-generation execution.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-lg md:text-xl font-normal mb-4">Process reimagination</h3>
+                    <p class="text-gray-400 text-sm md:text-base leading-relaxed">
+                        We don't just automate existing workflows. We question why they exist and design AI-native alternatives.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-lg md:text-xl font-normal mb-4">Domain agnostic</h3>
+                    <p class="text-gray-400 text-sm md:text-base leading-relaxed">
+                        Healthcare, legal, finance—we bring AI expertise to your domain knowledge. You know your business. We know how AI can transform it.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-lg md:text-xl font-normal mb-4">Enterprise-grade privacy</h3>
+                    <p class="text-gray-400 text-sm md:text-base leading-relaxed">
+                        HIPAA, legal confidentiality, financial regulations. Security and compliance are built into our approach, not bolted on.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Engagement -->
+            <section class="py-16 md:py-20 lg:py-24 border-t border-b border-zinc-800 mb-16 md:mb-24 opacity-0 animate-fade-in" style="animation-delay: 1s">
+                <h2 class="text-2xl md:text-3xl font-light text-center mb-12 md:mb-16">Two ways to work together</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
+                    <div class="p-8 md:p-10 bg-gradient-to-br from-white/[0.02] to-transparent border border-zinc-800 hover:scale-[1.02] transition-transform">
+                        <h3 class="text-xl md:text-2xl font-light mb-4">As Co-Founders</h3>
+                        <p class="text-gray-400 text-sm md:text-base leading-relaxed">
+                            We invest our expertise for equity, building your AI core as true partners with aligned incentives.
+                        </p>
+                    </div>
+                    <div class="p-8 md:p-10 bg-gradient-to-br from-white/[0.02] to-transparent border border-zinc-800 hover:scale-[1.02] transition-transform">
+                        <h3 class="text-xl md:text-2xl font-light mb-4">As Consultants</h3>
+                        <p class="text-gray-400 text-sm md:text-base leading-relaxed">
+                            Fixed scope or ongoing retainer, solving specific challenges with focused expertise.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Domains -->
+            <section class="text-center mb-16 md:mb-24 opacity-0 animate-fade-in" style="animation-delay: 1.2s">
+                <p class="text-xs md:text-sm uppercase tracking-[0.2em] text-gray-500 mb-4">Current focus</p>
+                <div class="text-base md:text-lg text-gray-400">
+                    Healthcare • Legal • Insurance • Finance • Marketing
+                </div>
+            </section>
+
+            <!-- Contact -->
+            <section class="text-center opacity-0 animate-fade-in" style="animation-delay: 1.4s">
+                <h2 class="text-2xl md:text-3xl font-light mb-8">Let's explore what's possible</h2>
+                <a href="mailto:hello@alphalux.ai" class="text-lg md:text-xl text-white border-b border-zinc-600 hover:border-white transition-colors">
+                    hello@alphalux.ai
+                </a>
+                
+                <div class="text-sm text-gray-600 mt-12 md:mt-16">
+                    Henrik & Lukas • Copenhagen
+                </div>
+            </section>
+        </div>
+    </main>
+</body>
+</html>

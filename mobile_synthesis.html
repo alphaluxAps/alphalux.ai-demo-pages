@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alphalux – Experience, Amplified</title>
+    <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+    <style>
+        @keyframes fadeUp {
+            0% { opacity: 0; transform: translateY(30px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes gridMove {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(50px, 50px); }
+        }
+        @keyframes bounceSlow {
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            50% { transform: translateX(-50%) translateY(10px); }
+        }
+        .animate-fade-up {
+            animation: fadeUp 1.2s ease forwards;
+        }
+        .animate-fade-up-delay {
+            animation: fadeUp 1.2s ease 0.3s forwards;
+        }
+        .animate-grid-move {
+            animation: gridMove 10s linear infinite;
+        }
+        .animate-bounce-slow {
+            animation: bounceSlow 2s infinite;
+        }
+    </style>
+</head>
+<body class="bg-black text-white font-light overflow-x-hidden">
+    <!-- Header -->
+    <div class="fixed top-0 left-0 z-50 p-6 md:p-10 lg:p-12 mix-blend-difference">
+        <div class="text-lg md:text-xl font-normal text-white">alphalux.ai</div>
+    </div>
+
+    <!-- Scroll Indicator -->
+    <div class="fixed bottom-8 left-1/2 -translate-x-1/2 text-xs uppercase tracking-[0.2em] text-gray-600 animate-bounce-slow md:block hidden">
+        Scroll
+    </div>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center justify-center px-8 md:px-16 lg:px-20">
+        <div class="text-center max-w-5xl mx-auto">
+            <h1 class="text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-extralight tracking-tighter mb-8 opacity-0 animate-fade-up">
+                Experience,<br>Amplified.
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-400 opacity-0 animate-fade-up-delay">
+                AI consultancy where generations meet innovation
+            </p>
+        </div>
+    </section>
+
+    <!-- Split Section - Mobile Optimized -->
+    <section class="min-h-screen flex items-center">
+        <div class="w-full">
+            <div class="flex flex-col md:grid md:grid-cols-2">
+                <!-- Left Side -->
+                <div class="bg-white text-black p-12 md:p-16 lg:p-20 min-h-[50vh] md:min-h-screen flex flex-col justify-center">
+                    <div class="text-xs md:text-sm uppercase tracking-[0.2em] opacity-50 mb-8">The Strategist</div>
+                    <div class="text-2xl md:text-3xl lg:text-4xl font-light mb-8 leading-tight">
+                        25 years building<br>enterprise systems
+                    </div>
+                    <div class="text-base md:text-lg opacity-70 leading-relaxed">
+                        Platform architecture. Business transformation. 
+                        The wisdom to know what works and why.
+                    </div>
+                </div>
+                <!-- Right Side -->
+                <div class="bg-black text-white p-12 md:p-16 lg:p-20 min-h-[50vh] md:min-h-screen flex flex-col justify-center md:border-l border-gray-800">
+                    <div class="text-xs md:text-sm uppercase tracking-[0.2em] opacity-50 mb-8">The Engineer</div>
+                    <div class="text-2xl md:text-3xl lg:text-4xl font-light mb-8 leading-tight">
+                        Native to the<br>age of AI
+                    </div>
+                    <div class="text-base md:text-lg opacity-70 leading-relaxed">
+                        Agentic systems. Rapid prototyping. 
+                        The vision to see what's possible tomorrow.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Photo Section -->
+    <section class="min-h-screen flex items-center justify-center bg-gradient-to-b from-black to-zinc-950 px-8 md:px-16 lg:px-20">
+        <div class="text-center max-w-6xl mx-auto py-20">
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-light mb-12 md:mb-16">
+                A partnership between generations
+            </h2>
+            <div class="bg-zinc-900 border border-zinc-800 p-8 md:p-12 lg:p-16 max-w-4xl mx-auto mb-8">
+                <div class="text-sm text-gray-600 uppercase tracking-[0.2em] mb-4">
+                    [Henrik & Lukas Photo]
+                </div>
+                <div class="text-xs text-gray-600">
+                    Professional, approachable<br>
+                    Black background, natural lighting
+                </div>
+            </div>
+            <p class="text-lg md:text-xl text-gray-400 mb-12 md:mb-16">
+                Father and son. Strategy and execution. Experience and innovation.
+            </p>
+            
+            <div class="flex flex-col md:flex-row gap-8 md:gap-16 justify-center">
+                <div class="text-center">
+                    <div class="text-base md:text-lg mb-2">Henrik</div>
+                    <div class="text-xs md:text-sm uppercase tracking-wider text-gray-600">Tech Strategist & Founder</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-base md:text-lg mb-2">Lukas</div>
+                    <div class="text-xs md:text-sm uppercase tracking-wider text-gray-600">AI Engineer & Co-Founder</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Synthetic Colleagues Section -->
+    <section class="min-h-screen flex items-center justify-center bg-zinc-950 px-8 md:px-16 lg:px-20 relative overflow-hidden">
+        <!-- Animated Grid Background -->
+        <div class="absolute inset-0 opacity-30 pointer-events-none">
+            <div class="absolute inset-0 animate-grid-move"
+                 style="background-image: linear-gradient(rgba(0, 255, 136, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 255, 136, 0.1) 1px, transparent 1px); background-size: 50px 50px;"></div>
+        </div>
+        
+        <div class="text-center max-w-5xl mx-auto relative z-10 py-20">
+            <h2 class="text-3xl md:text-5xl lg:text-6xl font-light mb-8 md:mb-12 leading-tight">
+                Our team is augmented<br>by synthetic colleagues.
+            </h2>
+            <p class="text-lg md:text-xl text-gray-400 leading-relaxed max-w-3xl mx-auto">
+                We use the systems we build, every day. Development, testing, research, operations—our 
+                AI colleagues work alongside us 24/7. This is our DNA. This is how we deliver 10x capacity 
+                with a boutique team.
+            </p>
+        </div>
+    </section>
+
+    <!-- Engagement Models -->
+    <section class="min-h-screen flex items-center justify-center bg-black px-8 md:px-16 lg:px-20">
+        <div class="text-center max-w-5xl mx-auto py-20">
+            <h2 class="text-2xl md:text-3xl font-light mb-12 md:mb-16">We engage in two ways</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 max-w-4xl mx-auto">
+                <div class="p-10 md:p-12 border border-zinc-800 hover:bg-zinc-950 transition-all">
+                    <h3 class="text-xl md:text-2xl font-light mb-4">As Co-Founders</h3>
+                    <p class="text-gray-400 text-sm md:text-base leading-relaxed">
+                        We invest our expertise for equity, building your AI core as true partners with aligned incentives.
+                    </p>
+                </div>
+                <div class="p-10 md:p-12 border border-zinc-800 hover:bg-zinc-950 transition-all">
+                    <h3 class="text-xl md:text-2xl font-light mb-4">As Consultants</h3>
+                    <p class="text-gray-400 text-sm md:text-base leading-relaxed">
+                        Fixed scope or ongoing retainer, solving specific challenges with focused expertise.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="py-24 md:py-32 lg:py-40 text-center px-8 md:px-16 lg:px-20">
+        <h2 class="text-4xl md:text-6xl lg:text-7xl font-extralight mb-10 md:mb-12">Let's talk.</h2>
+        <a href="mailto:hello@alphalux.ai" class="text-xl md:text-2xl text-white border-b border-gray-600 hover:border-white transition-colors">
+            hello@alphalux.ai
+        </a>
+    </section>
+
+    <script>
+        // Hide scroll indicator after scroll
+        window.addEventListener('scroll', () => {
+            const indicator = document.querySelector('.animate-bounce-slow');
+            if (indicator && window.scrollY > 100) {
+                indicator.style.opacity = '0';
+            }
+        });
+
+        // Reveal animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('section').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(50px)';
+            section.style.transition = 'all 1s ease';
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
