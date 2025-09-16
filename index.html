@@ -1,6 +1,180 @@
-<html>
-
-Examples
-
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alphalux.ai - Website Concepts</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            padding: 60px;
+        }
+        
+        h1 {
+            font-size: 36px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 16px;
+            letter-spacing: -1px;
+        }
+        
+        .subtitle {
+            color: #666;
+            font-size: 18px;
+            margin-bottom: 48px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .concepts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin-bottom: 40px;
+        }
+        
+        .concept-card {
+            display: block;
+            padding: 24px;
+            border: 2px solid #f0f0f0;
+            border-radius: 12px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            background: white;
+        }
+        
+        .concept-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+            border-color: #667eea;
+        }
+        
+        .concept-number {
+            display: inline-block;
+            width: 28px;
+            height: 28px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 28px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+        
+        .concept-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 8px;
+        }
+        
+        .concept-tagline {
+            font-size: 14px;
+            color: #888;
+            line-height: 1.5;
+        }
+        
+        .footer {
+            text-align: center;
+            color: #999;
+            font-size: 14px;
+            padding-top: 32px;
+            border-top: 1px solid #f0f0f0;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 40px 24px;
+            }
+            
+            h1 {
+                font-size: 28px;
+            }
+            
+            .concepts-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Alphalux.ai</h1>
+        <p class="subtitle">Website Concept Variations - Mobile Optimized</p>
+        
+        <div class="concepts-grid">
+            <a href="mobile_humble1.html" class="concept-card">
+                <div class="concept-number">1</div>
+                <div class="concept-title">Humble 1</div>
+                <div class="concept-tagline">"Same headcount. More bandwidth." Clean Scandinavian minimalism.</div>
+            </a>
+            
+            <a href="mobile_humble2.html" class="concept-card">
+                <div class="concept-number">2</div>
+                <div class="concept-title">Humble 2</div>
+                <div class="concept-tagline">"AI-First, Ego-Second" Dark, understated, professional.</div>
+            </a>
+            
+            <a href="mobile_refined1.html" class="concept-card">
+                <div class="concept-number">3</div>
+                <div class="concept-title">Refined 1</div>
+                <div class="concept-tagline">"We Are What We Build" Cool confidence, sophisticated black.</div>
+            </a>
+            
+            <a href="mobile_refined2.html" class="concept-card">
+                <div class="concept-number">4</div>
+                <div class="concept-title">Refined 2</div>
+                <div class="concept-tagline">"Same Headcount. More Bandwidth." Bright, modern, approachable.</div>
+            </a>
+            
+            <a href="mobile_refined3.html" class="concept-card">
+                <div class="concept-number">5</div>
+                <div class="concept-title">Refined 3</div>
+                <div class="concept-tagline">"Agentic by Design" Technical, sophisticated, quietly confident.</div>
+            </a>
+            
+            <a href="mobile_signal.html" class="concept-card">
+                <div class="concept-number">6</div>
+                <div class="concept-title">The Signal</div>
+                <div class="concept-tagline">Declarative minimalism. Short, powerful statements.</div>
+            </a>
+            
+            <a href="mobile_synthesis.html" class="concept-card">
+                <div class="concept-number">7</div>
+                <div class="concept-title">The Synthesis</div>
+                <div class="concept-tagline">"Experience, Amplified" Split-screen aesthetic, generations meet.</div>
+            </a>
+            
+            <a href="mobile_team.html" class="concept-card">
+                <div class="concept-number">8</div>
+                <div class="concept-title">The Team</div>
+                <div class="concept-tagline">"Meet the Full Team" Humans + synthetic colleagues visualization.</div>
+            </a>
+        </div>
+        
+        <div class="footer">
+            <p>Copenhagen • 2025 • Henrik & Lukas</p>
+            <p style="margin-top: 8px; font-size: 12px;">All concepts are mobile-optimized and responsive</p>
+        </div>
+    </div>
+</body>
 </html>
