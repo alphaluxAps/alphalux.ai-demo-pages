@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alphalux</title>
+    <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+    <style>
+        @keyframes appear {
+            to { opacity: 1; }
+        }
+        @keyframes pulseAI {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
+        }
+        @keyframes arrow-down {
+            0%, 100% { transform: translateY(0); opacity: 0.3; }
+            50% { transform: translateY(8px); opacity: 0.6; }
+        }
+        .animate-appear {
+            animation: appear 0.8s ease forwards;
+        }
+        .animate-pulse-ai {
+            animation: pulseAI 3s ease-in-out infinite;
+        }
+        .animate-arrow {
+            animation: arrow-down 2.5s ease-in-out infinite;
+        }
+        .grayscale-image {
+            filter: grayscale(100%) contrast(1.1) brightness(0.9);
+        }
+    </style>
+</head>
+<body class="font-light">
+    <!-- Navigation Dots -->
+    <div class="fixed right-4 md:right-8 top-1/2 -translate-y-1/2 z-50 space-y-4 hidden md:flex md:flex-col">
+        <div class="w-2 h-2 rounded-full bg-black opacity-100 cursor-pointer transition-all hover:scale-150" data-slide="0"></div>
+        <div class="w-2 h-2 rounded-full bg-black opacity-20 cursor-pointer transition-all hover:scale-150" data-slide="1"></div>
+        <div class="w-2 h-2 rounded-full bg-white opacity-20 cursor-pointer transition-all hover:scale-150" data-slide="2"></div>
+        <div class="w-2 h-2 rounded-full bg-black opacity-20 cursor-pointer transition-all hover:scale-150" data-slide="3"></div>
+        <div class="w-2 h-2 rounded-full bg-white opacity-20 cursor-pointer transition-all hover:scale-150" data-slide="4"></div>
+        <div class="w-2 h-2 rounded-full bg-black opacity-20 cursor-pointer transition-all hover:scale-150" data-slide="5"></div>
+    </div>
+
+    <!-- Scroll Indicator -->
+    <div class="fixed bottom-2 left-1/2 -translate-x-1/2 z-40 opacity-30 animate-arrow">
+        <svg width="20" height="32" viewBox="0 0 20 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 0L10 28" stroke="#999" stroke-width="1"/>
+            <path d="M2 20L10 28L18 20" stroke="#999" stroke-width="1"/>
+        </svg>
+    </div>
+
+    <!-- Slide 1: Logo -->
+    <section class="min-h-screen flex items-center justify-center px-8 md:px-16 bg-white text-black relative">
+        <div class="opacity-0 animate-appear text-2xl md:text-3xl font-light tracking-tight">
+            alphalux.ai
+        </div>
+        <div class="absolute bottom-8 right-8 text-xs opacity-30 uppercase tracking-[0.2em]">Copenhagen 2025</div>
+    </section>
+
+    <!-- Slide 2: Domain Expertise -->
+    <section class="min-h-screen flex items-center justify-center px-8 md:px-16 bg-black text-white">
+        <div class="opacity-0 animate-appear max-w-4xl">
+            <div class="text-3xl md:text-5xl lg:text-6xl font-light leading-tight">
+                We bring <strong class="font-medium">AI expertise</strong> to<br>
+                your <strong class="font-medium">domain knowledge</strong>.
+            </div>
+            <div class="text-lg md:text-2xl lg:text-3xl opacity-70 mt-8 leading-relaxed">
+                You know your business.<br>
+                We know how AI can transform it.
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 3: Team Equation - Linear Style -->
+    <section class="min-h-screen flex items-center justify-center px-8 md:px-16 bg-white text-black relative">
+        <div class="opacity-0 animate-appear max-w-6xl w-full">
+            <div class="text-xl md:text-2xl lg:text-3xl text-center mb-16 opacity-60">
+                25 years experience + native AI thinking
+            </div>
+            
+            <!-- Linear Equation -->
+            <div class="bg-gray-50 p-8 md:p-12 rounded-lg">
+                <div class="flex items-center justify-center gap-4 md:gap-8 text-2xl md:text-4xl lg:text-5xl font-light">
+                    <!-- Humans -->
+                    <div class="flex items-center gap-2">
+                        <span class="text-gray-400">[</span>
+                        <div class="flex gap-1">
+                            <div class="w-12 h-12 md:w-16 md:h-16 rounded-sm bg-black grayscale-image flex items-center justify-center overflow-hidden">
+                                <span class="text-[8px] text-white">H</span>
+                            </div>
+                            <div class="w-12 h-12 md:w-16 md:h-16 rounded-sm bg-black grayscale-image flex items-center justify-center overflow-hidden">
+                                <span class="text-[8px] text-white">L</span>
+                            </div>
+                        </div>
+                        <span class="text-gray-400">]</span>
+                    </div>
+                    
+                    <span class="text-gray-400">×</span>
+                    
+                    <!-- AI -->
+                    <div class="flex items-center gap-2">
+                        <span class="text-gray-400">[</span>
+                        <span class="font-mono">∞</span>
+                        <span class="text-gray-400">]</span>
+                    </div>
+                    
+                    <span class="font-bold">=</span>
+                    
+                    <!-- Result -->
+                    <span class="font-bold text-black">10x</span>
+                </div>
+                
+                <div class="flex justify-around text-xs md:text-sm uppercase tracking-wider opacity-50 mt-8">
+                    <span>Human Team</span>
+                    <span>AI Colleagues</span>
+                    <span>Capacity</span>
+                </div>
+            </div>
+        </div>
+        <div class="absolute top-8 left-8 text-xs opacity-30 uppercase tracking-[0.2em]">Father & Son</div>
+    </section>
+
+    <!-- Slide 4: Privacy Note -->
+    <section class="min-h-screen flex items-center justify-center px-8 md:px-16 bg-black text-white">
+        <div class="opacity-0 animate-appear max-w-4xl text-center">
+            <div class="text-lg md:text-xl uppercase tracking-[0.2em] opacity-50 mb-8">Privacy</div>
+            <div class="text-2xl md:text-4xl lg:text-5xl font-light leading-relaxed">
+                We understand enterprise requirements.
+            </div>
+            <div class="text-lg md:text-xl lg:text-2xl opacity-70 mt-8 leading-relaxed">
+                HIPAA • Legal Confidentiality • Financial Regulations<br>
+                <span class="text-base md:text-lg opacity-50">These aren't obstacles, they're part of the design.</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 5: Engagement -->
+    <section class="min-h-screen flex items-center justify-center px-8 md:px-16 bg-white text-black">
+        <div class="opacity-0 animate-appear text-center max-w-4xl">
+            <div class="text-3xl md:text-5xl lg:text-6xl font-light leading-tight mb-16">
+                Three ways to <strong class="font-medium">engage</strong>.
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-6">
+                <div class="p-6 border-l-2 border-gray-300 text-left">
+                    <div class="text-lg md:text-xl font-medium mb-2">Equity</div>
+                    <div class="text-sm opacity-60">We become co-founders</div>
+                </div>
+                <div class="p-6 border-l-2 border-gray-300 text-left">
+                    <div class="text-lg md:text-xl font-medium mb-2">Retainer</div>
+                    <div class="text-sm opacity-60">Ongoing partnership</div>
+                </div>
+                <div class="p-6 border-l-2 border-gray-300 text-left">
+                    <div class="text-lg md:text-xl font-medium mb-2">Project</div>
+                    <div class="text-sm opacity-60">Fixed scope delivery</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 6: Contact -->
+    <section class="min-h-screen flex items-center justify-center px-8 md:px-16 bg-black text-white relative">
+        <div class="opacity-0 animate-appear text-center">
+            <div class="text-lg md:text-xl opacity-60 mb-8">Contact.</div>
+            <a href="mailto:hello@alphalux.ai" class="text-3xl md:text-5xl lg:text-6xl border-b-2 border-white hover:opacity-60 transition-opacity">
+                hello@alphalux.ai
+            </a>
+        </div>
+        <div class="absolute top-8 left-8 text-xs opacity-30 uppercase tracking-[0.2em]">Henrik & Lukas</div>
+    </section>
+
+    <script>
+        // Smooth scroll handling
+        const slides = document.querySelectorAll('section');
+        const dots = document.querySelectorAll('[data-slide]');
+        const scrollIndicator = document.querySelector('.animate-arrow');
+
+        // Hide scroll indicator after first scroll
+        let hasScrolled = false;
+        window.addEventListener('scroll', () => {
+            const atBottom = window.innerHeight + window.scrollY >= document.body.offsetHeight ;
+            if (atBottom) {
+                scrollIndicator.style.opacity = '0';
+            } else {
+                scrollIndicator.style.opacity = '0.4'; // or whatever default you like
+            }
+        });
+        
+        // Update dots based on scroll position
+        const updateDots = () => {
+            const scrollPosition = window.scrollY;
+            const windowHeight = window.innerHeight;
+            const currentSlide = Math.round(scrollPosition / windowHeight);
+            
+            dots.forEach((dot, index) => {
+                if (index === currentSlide) {
+                    dot.classList.add('opacity-100');
+                    dot.classList.remove('opacity-20');
+                    dot.classList.add('scale-150');
+                } else {
+                    dot.classList.remove('opacity-100');
+                    dot.classList.add('opacity-20');
+                    dot.classList.remove('scale-150');
+                }
+                
+                if (slides[index] && slides[index].classList.contains('bg-black')) {
+                    dot.classList.add('bg-white');
+                    dot.classList.remove('bg-black');
+                } else {
+                    dot.classList.add('bg-black');
+                    dot.classList.remove('bg-white');
+                }
+            });
+        };
+
+        // Dot navigation
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                slides[index].scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+        // Update on scroll
+        window.addEventListener('scroll', updateDots);
+        updateDots();
+
+        // Restart animations when slides come into view
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const content = entry.target.querySelector('[class*="animate-appear"]');
+                    if (content) {
+                        content.style.animation = 'none';
+                        setTimeout(() => {
+                            content.style.animation = '';
+                        }, 10);
+                    }
+                }
+            });
+        }, { threshold: 0.5 });
+
+        slides.forEach(slide => observer.observe(slide));
+    </script>
+</body>
+</html>
