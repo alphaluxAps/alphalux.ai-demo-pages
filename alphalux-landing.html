@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alphalux</title>
+    <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+    <style>
+        /* Scroll reveal animation */
+        @keyframes fadeInUp {
+            from { 
+                opacity: 0; 
+                transform: translateY(30px); 
+            }
+            to { 
+                opacity: 1; 
+                transform: translateY(0); 
+            }
+        }
+        
+        /* Bounce animation for scroll indicator */
+        @keyframes bounce-subtle {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(5px); }
+        }
+        
+        /* Initial hidden state for content */
+        .reveal-content {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        
+        /* Animation when revealed */
+        .revealed {
+            animation: fadeInUp 0.8s ease forwards;
+        }
+        
+        /* Staggered reveal for child elements */
+        .reveal-stagger > * {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        
+        .reveal-stagger.revealed > * {
+            animation: fadeInUp 0.6s ease forwards;
+        }
+        
+        .reveal-stagger.revealed > *:nth-child(1) { animation-delay: 0.1s; }
+        .reveal-stagger.revealed > *:nth-child(2) { animation-delay: 0.2s; }
+        .reveal-stagger.revealed > *:nth-child(3) { animation-delay: 0.3s; }
+        .reveal-stagger.revealed > *:nth-child(4) { animation-delay: 0.4s; }
+        .reveal-stagger.revealed > *:nth-child(5) { animation-delay: 0.5s; }
+        
+        /* Scroll indicator animation */
+        .animate-bounce-subtle {
+            animation: bounce-subtle 2s ease-in-out infinite;
+        }
+        
+        /* Smooth scroll behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Navigation dot active state */
+        .nav-dot {
+            transition: all 0.3s ease;
+        }
+        
+        .nav-dot.active {
+            transform: scale(1.5);
+        }
+    </style>
+</head>
+<body class="font-light">
+    <!-- Navigation Dots -->
+    <div class="fixed right-4 md:right-8 top-1/2 -translate-y-1/2 z-50 space-y-4 hidden md:flex md:flex-col">
+        <div class="nav-dot w-2 h-2 rounded-full bg-black opacity-100 cursor-pointer active" data-slide="0"></div>
+        <div class="nav-dot w-2 h-2 rounded-full bg-black opacity-20 cursor-pointer" data-slide="1"></div>
+        <div class="nav-dot w-2 h-2 rounded-full bg-white opacity-20 cursor-pointer" data-slide="2"></div>
+        <div class="nav-dot w-2 h-2 rounded-full bg-white opacity-20 cursor-pointer" data-slide="3"></div>
+        <div class="nav-dot w-2 h-2 rounded-full bg-black opacity-20 cursor-pointer" data-slide="4"></div>
+    </div>
+
+    <!-- Scroll Indicator -->
+    <div id="scrollIndicator" class="fixed bottom-2 left-1/2 -translate-x-1/2 z-40 text-gray-400 opacity-40 animate-bounce-subtle transition-opacity duration-500">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+            <path d="M7 13L12 18L17 13"></path>
+            <path d="M7 6L12 11L17 6"></path>
+        </svg>
+    </div>
+
+    <!-- Slide 1: Logo + Domain Expertise -->
+    <section class="min-h-screen flex items-center justify-center px-8 md:px-16 bg-white text-black relative">
+        <div class="reveal-content text-center max-w-4xl">
+            <div class="text-3xl md:text-5xl lg:text-6xl font-light leading-tight mb-8">
+                You know your <strong class="font-medium">business</strong>.<br>
+                We know how <strong class="font-medium">AI</strong> can transform it.
+            </div>
+            <div class="text-2xl md:text-3xl font-light tracking-tight opacity-70">
+                alphalux.ai
+            </div>
+        </div>
+        <div class="absolute bottom-8 right-8 text-xs opacity-30 uppercase tracking-[0.2em]">Copenhagen 2025</div>
+    </section>
+
+    <!-- Slide 2: Engagement -->
+    <section class="min-h-screen flex items-center justify-center px-8 md:px-16 bg-black text-white">
+        <div class="reveal-content text-center max-w-4xl">
+            <div class="text-3xl md:text-5xl lg:text-6xl font-light leading-tight mb-12 md:mb-16">
+                Three ways to <strong class="font-medium">engage</strong>.
+            </div>
+            <div class="reveal-stagger flex flex-col md:flex-row gap-8 md:gap-12 justify-center">
+                <div class="text-center">
+                    <div class="text-lg md:text-xl font-normal mb-2">Equity</div>
+                    <div class="text-xs md:text-sm uppercase tracking-[0.15em] opacity-60">Co-Founders</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-lg md:text-xl font-normal mb-2">Retainer</div>
+                    <div class="text-xs md:text-sm uppercase tracking-[0.15em] opacity-60">Your AI Team</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-lg md:text-xl font-normal mb-2">Project</div>
+                    <div class="text-xs md:text-sm uppercase tracking-[0.15em] opacity-60">Focused Delivery</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 3: Team Equation -->
+    <section class="min-h-screen flex items-center justify-center px-8 md:px-16 bg-white text-black relative">
+        <div class="reveal-content text-center max-w-5xl">
+            <div class="text-2xl md:text-3xl lg:text-4xl font-light mb-12 md:mb-16">
+                <strong class="font-medium">25 years</strong> of experience meets <strong class="font-medium">AI-first</strong> approach
+            </div>
+            
+            <div class="reveal-stagger space-y-8 max-w-md mx-auto">
+                <!-- Card 1: Humans -->
+                <div class="bg-gray-50 p-4 rounded-lg shadow-md">
+                    <div class="flex justify-center gap-4 mb-4">
+                        <img src="https://alphaluxaps.github.io/alphalux.ai-demo-pages/henrik_profile_transparent.png" 
+                             alt="Henrik" 
+                             class="w-[4.5rem] h-[4.5rem] md:w-20 md:h-20 rounded-full object-cover">
+                        <img src="https://alphaluxaps.github.io/alphalux.ai-demo-pages/lukas_profile_transparent.png" 
+                             alt="Lukas" 
+                             class="w-[4.5rem] h-[4.5rem] md:w-20 md:h-20 rounded-full object-cover">
+                    </div>
+                    <div class="text-sm uppercase tracking-wider opacity-60">Human Expertise</div>
+                </div>
+                
+                <!-- Operator -->
+                <div class="text-3xl font-light text-gray-400">×</div>
+                
+                <!-- Card 2: Synthetic Employees -->
+                <div class="bg-gray-50 p-4 rounded-lg shadow-md">
+                    <div class="text-5xl mb-3">∞</div>
+                    <div class="text-sm uppercase tracking-wider opacity-60">Synthetic Employees</div>
+                </div>
+                
+                <!-- Equals -->
+                <div class="text-3xl font-light text-gray-400">=</div>
+                
+                <!-- Result Card -->
+                <div class="border-2 border-black p-6 rounded-lg shadow-xl scale-105 bg-gray-50">
+                    <div class="text-xl md:text-2xl font-medium">Exponential Bandwidth</div>
+                    <div class="text-sm opacity-60 mt-2">with human direction</div>
+                </div>
+            </div>
+        </div>
+        <div class="absolute top-8 left-8 text-xs opacity-30 uppercase tracking-[0.2em]">Father & Son</div>
+    </section>
+
+    <!-- Slide 4: Compliance Note -->
+    <section class="min-h-screen flex items-center justify-center px-8 md:px-16 bg-black text-white">
+        <div class="reveal-content max-w-4xl text-center space-y-8">
+            <div class="text-lg md:text-xl uppercase tracking-[0.2em] opacity-50">A note on compliance</div>
+            <div class="text-2xl md:text-4xl lg:text-5xl font-light leading-relaxed">
+                We understand enterprise requirements.
+            </div>
+            <div class="text-lg md:text-xl lg:text-2xl opacity-70">
+                GDPR • HIPAA • Legal Confidentiality • Financial Regulations
+            </div>
+            <div class="text-base md:text-lg opacity-50">
+                These aren't obstacles, they're part of the design.
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 5: Contact -->
+    <section class="min-h-screen flex items-center justify-center px-8 md:px-16 bg-white text-black relative">
+        <div class="reveal-content text-center">
+            <div class="text-lg md:text-xl opacity-60 mb-8">Contact.</div>
+            <a href="mailto:hello@alphalux.ai" class="text-3xl md:text-5xl lg:text-6xl border-b-2 border-black hover:opacity-60 transition-opacity">
+                hello@alphalux.ai
+            </a>
+        </div>
+        <div class="absolute top-8 left-8 text-xs opacity-30 uppercase tracking-[0.2em]">Henrik & Lukas</div>
+    </section>
+
+    <script>
+        // Get all elements
+        const slides = document.querySelectorAll('section');
+        const dots = document.querySelectorAll('.nav-dot');
+        const scrollIndicator = document.getElementById('scrollIndicator');
+        let hasScrolled = false;
+        
+        // Setup Intersection Observer for reveal animations
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Find all elements that need revealing in this section
+                    const revealElements = entry.target.querySelectorAll('.reveal-content, .reveal-stagger');
+                    revealElements.forEach((element, index) => {
+                        // Add a slight delay for multiple elements
+                        setTimeout(() => {
+                            element.classList.add('revealed');
+                        }, index * 100);
+                    });
+                    
+                    // Stop observing this section once revealed (optional: remove for re-animation)
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.1, // Trigger when 10% of the section is visible
+            rootMargin: '0px 0px -50px 0px' // Trigger slightly before fully in view
+        });
+        
+        // Observe all sections
+        slides.forEach(section => {
+            revealObserver.observe(section);
+        });
+        
+        // Update navigation dots based on scroll position
+        const updateDots = () => {
+            const scrollPosition = window.scrollY;
+            const windowHeight = window.innerHeight;
+            const currentSlide = Math.round(scrollPosition / windowHeight);
+            
+            dots.forEach((dot, index) => {
+                // Remove all active states
+                dot.classList.remove('active', 'opacity-100');
+                dot.classList.add('opacity-20');
+                
+                // Add active state to current dot
+                if (index === currentSlide) {
+                    dot.classList.add('active', 'opacity-100');
+                    dot.classList.remove('opacity-20');
+                }
+                
+                // Update dot color based on slide background
+                if (slides[index] && slides[index].classList.contains('bg-black')) {
+                    dot.classList.add('bg-white');
+                    dot.classList.remove('bg-black');
+                } else {
+                    dot.classList.add('bg-black');
+                    dot.classList.remove('bg-white');
+                }
+            });
+        };
+        
+        // Hide scroll indicator after first scroll
+        const handleScroll = () => {
+            if (!hasScrolled && window.scrollY > 100) {
+                hasScrolled = true;
+                scrollIndicator.style.opacity = '0';
+                setTimeout(() => {
+                    scrollIndicator.style.display = 'none';
+                }, 500);
+            }
+            updateDots();
+        };
+        
+        // Dot navigation click handlers
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                slides[index].scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+        
+        // Event listeners
+        window.addEventListener('scroll', handleScroll);
+        
+        // Initial setup
+        updateDots();
+        
+        // Reveal first slide immediately
+        setTimeout(() => {
+            const firstSlideContent = slides[0].querySelectorAll('.reveal-content');
+            firstSlideContent.forEach(element => {
+                element.classList.add('revealed');
+            });
+        }, 100);
+    </script>
+</body>
+</html>
